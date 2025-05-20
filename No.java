@@ -8,7 +8,16 @@ public class No {
     }
 
     public int contarNos(No node) {
-        if (node == null) return 0;
+        if (node == null)
+            return 0;
         return 1 + contarNos(node.esquerda) + contarNos(node.direita);
+    }
+
+    public void buscaPreOrdem(No node) {
+        if (node != null) {
+            System.out.print(node.valor + " ");
+            buscaPreOrdem(node.esquerda);
+            buscaPreOrdem(node.direita);
+        }
     }
 }
