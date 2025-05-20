@@ -20,4 +20,12 @@ public class No {
             buscaPreOrdem(node.direita);
         }
     }
+
+    public void buscaEmOrdem(No node) {
+        if (node != null) {
+            buscaEmOrdem(node.esquerda);
+            System.out.print(node.valor + " ");
+            buscaEmOrdem(node.direita);
+        }
+    }
 }
